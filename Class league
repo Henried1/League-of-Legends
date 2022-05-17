@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Thuis
+{
+    class LolChampions {
+
+
+        public string ChampionName;
+        private string ChampionRole;
+        private string ChampionLane;
+        public bool IsMeta;
+        public static int ChampionCount = 0;
+
+
+        public LolChampions(string AchampionName, string AchampionRole, string AchampionLane, bool aIsMeta)
+        {
+
+           this.ChampionName = AchampionName;
+           this.championRole = AchampionRole;
+           this.championLane = AchampionLane;
+           this.IsMeta = aIsMeta;
+           ChampionCount++;
+
+
+           Console.WriteLine($"Champion: {ChampionName}, Role: {championRole}, Lane: {championLane}, meta: {IsMeta}");
+        }
+        public string championRole
+        {
+            get {
+                return ChampionRole;
+            }
+            set
+            {
+                if (value == "marksman" || value == "Bruiser" || value == "support")
+                {
+
+                    ChampionRole = value;
+
+                }
+                else
+                {
+                    ChampionRole = "Invalid role";
+                }
+            
+            }
+        }
+
+        public string championLane
+        {
+            get 
+            {
+                return ChampionLane;
+            }
+            set 
+            {
+                if (value == "ADC" || value == "TOP" || value == "MID" || value == "JUNGLE" || value == "SUPPORT")
+
+                {
+                    ChampionLane = value; 
+                }
+                else
+                {
+                    ChampionLane = "Invalid lane";
+                }
+            
+            }
+
+        }
+        public bool Meta()
+        {
+            if (IsMeta && ChampionRole == "marksman")
+            {
+                Console.WriteLine($"{ChampionName} is not super useless congrats ");
+                Console.WriteLine(" ");
+            }
+            else if (IsMeta && ChampionRole == "bruiser")
+            {
+                Console.WriteLine($"{ChampionName} is broken just like yo moms pussy ");
+                Console.WriteLine(" ");
+            }
+            else if (IsMeta && ChampionRole == "support")
+            {
+                Console.WriteLine("Supports are always going to have some type of relevance ofcourse :D");
+                Console.WriteLine(" ");
+
+            }
+            else
+            {
+                Console.WriteLine($"{ChampionName} is useless");
+                Console.WriteLine(" ");
+
+            }
+
+            return false;
+
+
+        }
+
+    }
+}
