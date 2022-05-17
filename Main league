@@ -1,0 +1,35 @@
+using System;
+
+namespace Thuis
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            LolChampions champion1 = new LolChampions("Jhin", "Marksmen", "APC", true);
+            champion1.Meta();
+            Console.WriteLine($"u heeft nu champions: {LolChampions.ChampionCount} gecreeërd");
+            Console.WriteLine(" ");
+            LolChampions champion2 = new LolChampions("Vayne", "Marksmen", "ADC", false);
+            champion2.Meta();
+            Console.WriteLine($"u heeft nu champions: {LolChampions.ChampionCount} gecreeërd");
+            Console.ReadLine();
+
+            
+
+
+
+
+
+
+
+        }
+     
+
+    }
+}
+
+
+
